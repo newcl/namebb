@@ -8,3 +8,4 @@
 127.0.0.1 - - [09/Jan/2015:10:01:30 +0800] "GET /jquery-1.11.2.js HTTP/1.1" 200 284184 "http://localhost:4444/" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/39.0.2171.95 Safari/537.36"
 127.0.0.1 - - [09/Jan/2015:10:15:02 +0800] "GET / HTTP/1.1" 200 504 "-" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/39.0.2171.95 Safari/537.36"
 127.0.0.1 - - [09/Jan/2015:10:15:02 +0800] "GET /jquery-1.11.2.js HTTP/1.1" 304 0 "http://localhost:4444/" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/39.0.2171.95 Safari/537.36"
+127.0.0.1 - - [09/Jan/2015:17:04:25 +0800] "GET / HTTP/1.1" 200 616 "-" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/39.0.2171.95 Safari/537.36"

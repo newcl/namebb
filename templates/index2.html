@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+    <link rel="stylesheet" type="text/css" href="../static/style.css">
+    <link rel="stylesheet" type="text/css" href="../static/style2.css">
+    <title>起名星--宝宝版</title>
+    <script type="text/javascript" src="../static/jquery-1.11.2.js"></script>
+    <script>
+        $(document).ready(function () {
+            $("#random_name_button").click(function () {
+                $.getJSON("/random", function(json){
+                    $("#random_name").html(json.v);
+
+                });
+            });
+
+            $("#rank_name_button").click(function () {
+                $.getJSON("/rank", {
+                    name:$("#rank_content").html
+                }, function(json){
+                    $("#rank_score").html(json.score);
+
+                });
+            });
+        });
+    </script>
+</head>
+<body>
+<div id="title">
+    <h2>起名星-宝宝版</h2>
+</div>
+<div id="random">
+    <div id="random_name"></div>
+    <button id="random_name_button">翻字典</button>
+</div>
+<div id="rank">
+    <input id="rank_content" type="text">
+
+    <div id="rank_score"></div>
+    <button id="rank_name_button">打分</button>
+</div>
+
+</body>
+</html>

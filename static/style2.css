@@ -1,0 +1,333 @@
+@charset "utf-8";
+/* CSS Document */
+/**微信主页、发现 */
+
+div{
+	-webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.content-body-home {max-width:800px;border:0px;margin:0 auto;}
+.content-home{max-width:800px;margin:0 auto;}
+.re_topbar_out {width:100%;height:50px;text-align:center;position: absolute;left:0;top:0; z-index:10002;}
+.re_topbar {width:100%;max-width:800px;height:50px;background:#49b7e8;margin:0 auto;position:relative;}
+.re_topbar_l {width:110px;height:50px;position: relative;margin-left:15px;cursor: pointer;float:left;}
+.re_topbar_l  .icon_lanMu {width:30px;height:30px;float:left; margin-top:10px; overflow:hidden;}
+.re_topbar_l  .icon_lanMu img {width:30px;height:60px;}
+.re_topbar_l:active  .icon_lanMu img {margin-top:-30px;}
+.re_topbar_l  .icon_lanMustar {width:12px;height:7px;float:left; margin-top:21px; overflow:hidden;}
+.re_topbar_l  .icon_lanMustar img {width:12px;height:14px;}
+.re_topbar_l:active  .icon_lanMustar img {margin-top:-7px;}
+.re_topbar_l .lanmu_name {display:block;width:60px;height:50px;line-height:50px; text-align:center; color:#FFF; font-size:18px;float:left;}
+.re_topbar_l:active .lanmu_name {color:#606060;}
+.re_topbar_title {clear:both;width:130px;height:30px;cursor:pointer;float:right;margin-right:15px;margin-top:10px;overflow:hidden; background-color:#FFF;border-radius: 8px;}
+.re_topbar_title:hover {background-color:#eee;}
+.re_topbar_title .icon_yaoFb {width:22px;height:22px;float:left; margin-top:4px;margin-left:10px;overflow:hidden;}
+.re_topbar_title .icon_yaoFb img {width:22px;height:44px;}
+.re_topbar_title:hover .icon_yaoFb img,
+.re_topbar_title:active .icon_yaoFb img {margin-top:-22px;}
+.re_topbar_title span {display:inline-block;height:22px;line-height:22px;float:left;margin-top:4px;font-size:16px;margin-left:8px;color:#49b7e8;}
+ul.fbUl {width:130px!important;height:auto!important;overflow:hidden;position: absolute!important;left:0!important;top:50px!important;}
+ul.fbUl li {height:49px;background-color:#FFF; border-bottom:1px solid #b8b8b8;cursor: pointer;}
+ul.fbUl li:hover,
+ul.fbUl li:active {background-color:#e5e6e8;}
+ul.fbUl li img {float:left;width:30px;height:30px;margin-left:15px; margin-top:10px;}
+ul.fbUl li span {display:inline-block;height:50px;line-height:50px;float:left; margin-left:12px;font-size:18px;color:#000;}
+.domain2 {padding-top:50px;}
+.recommend_content{background:#fff;padding:8px 15px 5px;position:relative;margin-bottom:1px;cursor: pointer;}
+.recommend_content:active {background-color: #d9d9d9;}
+.span_type{float: right; overflow: hidden; display: inline-block; height: 40px; width: 40px;}
+.re_content{height:40px;line-height:20px;margin-bottom:10px;}
+.re_content2 {margin-bottom:5px; position:relative; height:40px; overflow:hidden;_width:780px;}
+.re_content2 .re_contentTxt {display:block;margin-right:50px;overflow:hidden; line-height:20px;height:40px;overflow : hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;}
+.re_content2 span.span_type {position:absolute;right:0;top:0;display:block;width:40px;height:40px;background-position:0 0;}
+.re_content2 span.span_type_recruit {
+	background:url(http://img1.hudongba.cn/images3/icon/recruit2x.png) no-repeat;background-size:40px 40px;
+	background-image:url(http://img1.hudongba.cn/images3/icon/recruit2x_2.png)\9;
+	*background-image:url(http://img1.hudongba.cn/images3/icon/recruit2x_2.png);
+}
+.re_content2 span.span_type_job {
+	background:url(http://img1.hudongba.cn/images3/icon/job2x.png) no-repeat;background-size:40px 40px;
+	background-image:url(http://img1.hudongba.cn/images3/icon/job2x_2.png)\9;
+	*background-image:url(http://img1.hudongba.cn/images3/icon/job2x_2.png);
+}
+.re_content2 span.span_type_vote {
+	background:url(http://img1.hudongba.cn/images3/icon/vote2x.png) no-repeat;background-size:40px 40px;
+	background-image:url(http://img1.hudongba.cn/images3/icon/vote2x_2.png)\9;
+	*background-image:url(http://img1.hudongba.cn/images3/icon/vote2x_2.png);
+}
+.re_content2 span.span_type_party {
+	background:url(http://img1.hudongba.cn/images3/icon/party2x.png) no-repeat;background-size:40px 40px;
+	background-image:url(http://img1.hudongba.cn/images3/icon/party2x_2.png)\9;
+	*background-image:url(http://img1.hudongba.cn/images3/icon/party2x_2.png);
+}
+.re_content2 span.span_type_article {
+	background:url(http://img1.hudongba.cn/images3/icon/article2x.png) no-repeat;background-size:40px 40px;
+	background-image:url(http://img1.hudongba.cn/images3/icon/article2x_2.png)\9;
+	*background-image:url(http://img1.hudongba.cn/images3/icon/article2x_2.png);
+}
+.recommend_massage{font-size:12px;height:20px;line-height:20px;color:#999;}
+.user_distance{float:left;}
+.user_distance{
+	height:20px;
+	line-height:20px;
+	padding-left:25px;
+	background:url(http://img1.hudongba.cn/images3/detail/address_icon.png) no-repeat;
+	background:url(http://img1.hudongba.cn/images3/detail/address_icon20x.png) no-repeat\9;
+	*background:url(http://img1.hudongba.cn/images3/detail/address_icon20x.png) no-repeat;
+	background-position:0 0%;
+	background-size:20px 20px;
+}
+.lable{float:left;margin-right: 30px}
+.address_icon img{width:18px;height:18px;margin-right:5px;}
+.user_distance{margin-right:30px;float:left;}
+.recommend_massage_right{float:right;position:relative;}
+.advertisement{width:100%;height:180px;background:#49b7e8;position:relative;text-align:center;}
+.adv_top{
+	padding-top:80px;
+	background:url(http://img1.hudongba.cn/images3/detail/weixin-new.png) no-repeat;
+	background:url(http://img1.hudongba.cn/images3/detail/weixin-new1x.png) no-repeat\9;
+	*background:url(http://img1.hudongba.cn/images3/detail/weixin-new1x.png) no-repeat;
+	background-size:214px 49px;
+	background-position:50% 50%;
+}
+.adv_close{position:absolute;right:10px;top:10px;cursor:pointer;}
+.adv_close img{width:14px;height:14px;}
+.advertisement h3{color:#fff;font-size:15px;}
+.adv_bot{
+	width:300px;height:80px;
+	margin:0 auto 0 auto;
+	background:url(http://img1.hudongba.cn/images3/detail/download-button.png) no-repeat;
+	background:url(http://img1.hudongba.cn/images3/detail/download-button1x.png) no-repeat\9;
+	*background:url(http://img1.hudongba.cn/images3/detail/download-button1x.png) no-repeat;
+	background-size:133px 34px;
+	background-position:50% 50%;
+	cursor:pointer;
+}
+.lastDiv {text-align:center;}
+.lastDiv a{color:#999;}
+.lastDiv p img {width:18px;height:18px;margin-right:5px;}
+/*热门互动*/
+.post_sample{padding:8px 16px;background:#fff;height:20px;overflow:hidden;}
+.post_sample_title{float:left;font-size:13px;color:#666;line-height:20px;width:65%;white-space:nowrap;text-overflow:ellipsis;-o-text-overflow:ellipsis;overflow:hidden;font-weight:normal;}
+.left{float:left;}
+.post_sample_post {color: #49b7e8;font-size: 13px;}
+.right-cc {cursor:pointer;float: right;font-size:13px;line-height:20px;color:#49b7e8;padding-left:22px;
+background:url(http://img1.hudongba.cn/images3/rightcc2x.png) no-repeat;
+background:url(http://img1.hudongba.cn/images3/rightcc1x.png) no-repeat\9;
+*background:url(http://img1.hudongba.cn/images3/rightcc1x.png) no-repeat;
+background-size:16px 16px;
+background-position:0 4px;
+background-position:0 2px\9;
+*background-position:0 2px;}
+/*发起投票*/
+.home_content{margin-bottom:15px;}
+.post_icon_vote{
+	width:45px;height:45px;
+	background:url(http://img1.hudongba.cn/images3/icon/vote2x.png) no-repeat;
+	background:url(http://img1.hudongba.cn/images3/icon/vote1x.png) no-repeat\9;
+	*background:url(http://img1.hudongba.cn/images3/icon/vote1x.png) no-repeat;
+	background-size:45px 45px;
+	background-position:0 50%;
+}
+.post_icon_party{
+	width:45px;height:45px;
+	background:url(http://img1.hudongba.cn/images3/icon/party2x.png) no-repeat;
+	background:url(http://img1.hudongba.cn/images3/icon/party1x.png) no-repeat\9;
+	*background:url(http://img1.hudongba.cn/images3/icon/party1x.png) no-repeat;
+	background-size:45px 45px;
+	background-position:0 50%;
+}
+.post_icon_article{
+	width:45px;height:45px;
+	background:url(http://img1.hudongba.cn/images3/icon/article2x.png) no-repeat;
+	background:url(http://img1.hudongba.cn/images3/icon/article1x.png) no-repeat\9;
+	*background:url(http://img1.hudongba.cn/images3/icon/article1x.png) no-repeat;
+	background-size:45px 45px;
+	background-position:0 50%;
+}
+.post_icon_recruit{
+	width:45px;height:45px;
+	background:url(http://img1.hudongba.cn/images3/icon/recruit2x.png) no-repeat;
+	background:url(http://img1.hudongba.cn/images3/icon/recruit1x.png) no-repeat\9;
+	*background:url(http://img1.hudongba.cn/images3/icon/recruit1x.png) no-repeat;
+	background-size:45px 45px;
+	background-position:0 50%;
+}
+.post_icon_job{
+	width:45px;height:45px;
+	background:url(http://img1.hudongba.cn/images3/icon/job2x.png) no-repeat;
+	background:url(http://img1.hudongba.cn/images3/icon/job1x.png) no-repeat\9;
+	*background:url(http://img1.hudongba.cn/images3/icon/job1x.png) no-repeat;
+	background-size:45px 45px;
+	background-position:0 50%;
+}
+.post_item_arrow{
+	width:18px;height:18px;
+	background:url(http://img1.hudongba.cn/images3/detail/arrow.png) no-repeat;
+	background:url(http://img1.hudongba.cn/images3/detail/arrow18x18.png) no-repeat\9;
+	*background:url(http://img1.hudongba.cn/images3/detail/arrow18x18.png) no-repeat;
+	background-size:18px 18px;
+	float: right;
+	margin-top:26px;
+}
+.post_link_arrow{
+	float:right;
+	width:45px;height:45px;
+	background:url(http://img1.hudongba.cn/images3/detail/arrow.png) no-repeat;
+	background:url(http://img1.hudongba.cn/images3/detail/arrow18x18.png) no-repeat\9;
+	*background:url(http://img1.hudongba.cn/images3/detail/arrow18x18.png) no-repeat;
+	background-size:18px 18px;
+	background-position:100% 20%;
+	cursor:pointer;
+}
+.post_item {background-color: #fff;border:0;margin-bottom: 1px;overflow: hidden;padding:0 8px 0 0;cursor:pointer;}
+.post_item:active {background-color: #d9d9d9;}
+.post_item .post_itemLeft {margin-top:9px;}
+.post_item_icon {float: left;margin:12px 10px 12px 10px;}
+.post_item_title {color: #000;font-size: 19px;line-height: 25px;display:block;}
+.post_item_note {color: #999;font-size: 13px;margin-top:9px;}
+/* 猜你喜欢*/
+.dt_guess{text-align:right;border-bottom:1px solid #eee;line-height:30px; clear:both;}
+.dt_guess a{color:#999;font-size:14px;}
+/* 猜你喜欢内容*/
+.dt_guess_item_icon {float: left;margin-right: 8px;padding-top:2px;padding-bottom:3px;_height:45px;_margin-top:0;}
+.dt_guess_item .dt_guess_item_count {float: right;margin-left: 8px; color:#999; font-size:14px;text-align:right;line-height: 40px;}
+.dt_guess_item .dt_guess_item_title_old {display:inline-block;height: 40px;overflow: hidden;color: #444;line-height: 40px;font-size:16px; cursor:pointer;width:650px;white-space:nowrap;text-overflow:ellipsis;-o-text-overflow:ellipsis;overflow:hidden;}
+.dt_guess_item {padding:8px 13px 8px 10px;cursor:pointer;}
+.dt_guess_item:active {background-color: #f3fafe;}
+.guess{padding:10px;background:#fff;margin-bottom:5px;}
+.guess img{width:40px;height:40px;}
+.guess_text{float:right;font-size:15px;color:#49b7e8;padding-bottom:5px; cursor:pointer;margin-right:13px;}
+.guess_text span {font-family:宋体;font-weight:600;}
+.guess_content{margin-bottom:5px;}
+.guess_content img{width:26px;height:26px;float:left;position:relative;top:-3px;margin-right:10px;}
+.guess_content p{font-size:14px;color:#999;float:left;overflow:hidden;width:180px;}
+.guess_item_count{float:right;font-size:13px;color:#999;}
+.dt_guess_item_title{
+	padding-left:40px;
+	background:url(http://img1.hudongba.cn/images3/icon/job2x.png) no-repeat;
+	background:url(http://img1.hudongba.cn/images3/icon/job26x26.png) no-repeat\9;
+	*background:url(http://img1.hudongba.cn/images3/icon/job26x26.png) no-repeat;
+	background-size:26px 26px;
+	background-position:0 50%;
+}
+.dt_guess_item_title a{color:#000;}
+#div_guess {padding:10px 0;}
+.index_guessTop {height:25px;}
+/*-请下载互动吧APP*/
+.post_link{font-size:14px;color:#999;height:28px;line-height:28px;background:#fff;padding:10px;margin-bottom:15px;overflow:hidden;cursor: pointer;}
+.post_link:active {background-color: #d9d9d9;}
+.post_link_title_import{float:left;}
+.post_link_title_import a{color:#49b7e8;font-size:14px; cursor:pointer;}
+/* 意见反馈 退出登录*/
+.home_footer{background:#fff;text-align:right;}
+.home_footer a{color:#999;font-size:13px;padding:8px 5px;line-height:36px;width:30px; margin-right:10px;}
+.home_footer a:active {color:#000;}
+.feedback{float:left;}
+/*loading区*/
+.loadingDiv {width:120px;height:120px; background-image:url(http://img1.hudongba.cn/images3/other/loadingBj.png); position:absolute;}
+.loadingDiv .pImg {padding-top:30px;padding-bottom:20px;text-align:center;}
+.loadingDiv .pImg img {width:30px;height:30px;}
+.loadingDiv .pTxt {text-align:center;font-size:12px; color:#FFF;}
+#scrollDiv{overflow:hidden;margin:15px auto;}
+.scrollText{height:20px;line-height:20px;padding:10px 12px;background:#fff;overflow:hidden;}
+.scrollText li{height:29px;}
+
+@-webkit-keyframes greenPulse {
+  from { background-color: #749a02; -webkit-box-shadow: 0 0 9px #333; }
+  50% { background-color: #91bd09; -webkit-box-shadow: 0 0 18px #91bd09; }
+  to { background-color: #749a02; -webkit-box-shadow: 0 0 9px #333; }
+}
+
+.generate_random_name_button {
+  -webkit-animation-name: greenPulse;
+  -webkit-animation-duration: 2s;
+  -webkit-animation-iteration-count: infinite;
+  width: 100px;
+  height: 40px;
+  text-align: center;
+ 	margin-left: auto;
+ 	margin-right: auto;
+ 	margin-top: 10px;
+ 	margin-bottom: 10px;
+
+
+}
+
+.random_name_text{
+	text-align:center;
+	margin-left: auto;
+	margin-right: auto;
+	padding-top: 20px;
+	padding-bottom: 20px
+}
+
+.generate_random_name_button_wrapper{
+	margin-right: auto;
+	margin-left: auto;
+	text-align: center;
+
+}
+
+.myButton {
+	-moz-box-shadow: 0px 10px 14px -7px #276873;
+	-webkit-box-shadow: 0px 10px 14px -7px #276873;
+	box-shadow: 0px 10px 14px -7px #276873;
+	background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #599bb3), color-stop(1, #408c99));
+	background:-moz-linear-gradient(top, #599bb3 5%, #408c99 100%);
+	background:-webkit-linear-gradient(top, #599bb3 5%, #408c99 100%);
+	background:-o-linear-gradient(top, #599bb3 5%, #408c99 100%);
+	background:-ms-linear-gradient(top, #599bb3 5%, #408c99 100%);
+	background:linear-gradient(to bottom, #599bb3 5%, #408c99 100%);
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#599bb3', endColorstr='#408c99',GradientType=0);
+	background-color:#599bb3;
+	-moz-border-radius:8px;
+	-webkit-border-radius:8px;
+	border-radius:8px;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:arial;
+	font-size:20px;
+	font-weight:bold;
+	padding:13px 32px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #3d768a;
+
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 10px;
+	margin-bottom: 10px;
+
+	-webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+.myButton:hover {
+	background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #408c99), color-stop(1, #599bb3));
+	background:-moz-linear-gradient(top, #408c99 5%, #599bb3 100%);
+	background:-webkit-linear-gradient(top, #408c99 5%, #599bb3 100%);
+	background:-o-linear-gradient(top, #408c99 5%, #599bb3 100%);
+	background:-ms-linear-gradient(top, #408c99 5%, #599bb3 100%);
+	background:linear-gradient(to bottom, #408c99 5%, #599bb3 100%);
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#408c99', endColorstr='#599bb3',GradientType=0);
+	background-color:#408c99;
+}
+.myButton:active {
+	position:relative;
+	top:1px;
+}
+
+

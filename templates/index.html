@@ -1,15 +1,31 @@
-<!DOCTYPE html>
-<html>
+<!DOCTYPE html PUBLIC "-//WAPFORUM//DTD XHTML Mobile 1.0//EN" "http://www.wapforum.org/DTD/xhtml-mobile10.dtd">
+<!-- saved from url=(0025)http://hudongba.mobi/post -->
+<html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-    <meta charset="UTF-8">
-    <title></title>
-    <script type="text/javascript" src="../static/jquery-1.11.2.js"></script>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+    <meta property="qc:admins" content="241045133560547672165721747716">
+
+    <title>起名星-宝宝版</title>
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <meta name="format-detection" content="telephone=no">
+    <meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7">
+    <link rel="apple-touch-icon" href="http://img1.hudongba.cn/images3/icon_72x72.png">
+    <link rel="icon" type="image/x-icon" href="http://hudongba.mobi/favicon.ico" size="16x16 24x24 32x32">
+    <link rel="shortcut icon" type="image/x-icon" href="http://hudongba.mobi/favicon.ico">
+    <link rel="stylesheet" type="text/css" href="../static/style.css">
+    <link rel="stylesheet" type="text/css" href="../static/style2.css">
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+    <meta name="HandheldFriendly" content="true">
+    <script src="../static/jquery-1.11.2.js"></script>
     <script>
+
         $(document).ready(function () {
             $("#random_name_button").click(function () {
                 $.getJSON("/random", function(json){
                     $("#random_name").html(json.v);
-
                 });
             });
 
@@ -25,19 +41,95 @@
     </script>
 </head>
 <body>
-<div id="title">
-    <h2>起名星-宝宝版</h2>
-</div>
-<div id="random">
-    <div id="random_name"></div>
-    <button id="random_name_button">翻字典</button>
-</div>
-<div id="rank">
-    <input id="rank_content" type="text">
+<div class="container domain">
+    <div class="content-home">
+        <div class="content-body-home">
 
-    <div id="rank_score"></div>
-    <button id="rank_name_button">打分</button>
+            <div id="scrollDiv">
+                <div class="scrollText">
+                    <ul style="margin-top: 0px;">
+
+
+                        <li id="post_sample" onclick="_setSample(this)" ontouchstart="" data-type="vote"
+                            data-title="周五下班准备哪里嗨" data-content="终于结束了六天的工作，今天下班大准备哪里嗨？"
+                            data-text="看电影^逛街^聚会^K歌^宅家^回家陪父母">
+                            <h3 class="left post_sample_title" style="width: 666px;"><a>周五下班准备哪里嗨</a></h3>
+
+                            <div class="right-cc">
+                                发起一个投票
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+
+            <div class="home_content">
+                <div class="post_item" ontouchstart="" onclick="">
+                    <div id="random_name" class="random_name_text">点下面的按钮找找灵感吧 :)</div>
+                </div>
+            </div>
+
+
+
+            <div class="generate_random_name_button_wrapper">
+                <div id="random_name_button" class="myButton">查字典</div>
+            </div>
+
+
+
+            <!--<div class="clear"></div>-->
+            <!--<div class="home_footer">-->
+                <!--<a class="post_feedback" ontouchstart="" href="http://hudongba.mobi/feedback">意见反馈</a>-->
+                <!--<a id="a_login" class="post_Logout" href="http://hudongba.mobi/login" onclick="_user._toLogout()"-->
+                   <!--ontouchstart="">登录</a>-->
+            <!--</div>-->
+        </div>
+    </div>
 </div>
+<script>
+</script>
+
+<div id="cover"></div>
+<div id="toast" class="toast"></div>
+
+<div id="alert" class="alert">
+    <div id="alert_title"></div>
+    <div id="alert_text"></div>
+    <div id="alert_button">
+        <button id="alert_button_ok" class="button_3" ontouchstart=""></button>
+    </div>
+    <div id="alert_cancel" class="alert_cancel" ontouchstart="" onclick="_alert._hide()"></div>
+</div>
+
+<div id="div_topbar_title" style="display:none;">互动吧</div>
+<div id="share_weixin" onclick="_shareInWeixin._hide()">
+    <div><img id="share_weixin_guide"></div>
+    <div>
+        <button ontouchstart="" class="button_3">关闭提示</button>
+    </div>
+</div>
+
+<div id="seo" style="height:1px;overflow:hidden;margin-top:-1px;">
+    <a href="http://hudongba.mobi/" style="color:#dddddd;font-size:1px">互动吧</a>
+    <a href="http://hudongba.mobi/showinfo/page/1" style="color:#dddddd;font-size:1px;">活动列表</a>
+    <a href="./hudong_files/hudong.html" style="color:#dddddd;font-size:1px">互动吧-发布首页</a>
+    <a href="http://hudongba.mobi/post/vote" style="color:#dddddd;font-size:1px">互动吧-发布投票</a>
+    <a href="http://hudongba.mobi/post/party" style="color:#dddddd;font-size:1px">互动吧-发布活动</a>
+    <a href="http://hudongba.mobi/post/article" style="color:#dddddd;font-size:1px">互动吧-发布文章</a>
+    <a href="http://hudongba.mobi/post/recruit" style="color:#dddddd;font-size:1px">互动吧-发布招募</a>
+    <a href="http://hudongba.mobi/post/job/0" style="color:#dddddd;font-size:1px">互动吧-发布招聘</a>
+    <a href="http://hudongba.mobi/hot" style="color:#dddddd;font-size:1px">互动吧-热门活动</a>
+</div>
+
+<script type="text/javascript">
+    var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+    document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3F5d111b19bcde9145b2cb96a1518abc63' type='text/javascript'%3E%3C/script%3E"));
+</script>
+
+<script>
+
+</script>
 
 </body>
 </html>
