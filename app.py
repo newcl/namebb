@@ -20,7 +20,10 @@ boy_name_file_prefix = "split_boy"
 girl_name_file_prefix = "split_girl"
 
 def init_logging():
-    logger = handlers.RotatingFileHandler("./log/namebb.log")
+
+    path = os.path.dirname(os.path.realpath(__file__))
+    
+    logger = handlers.RotatingFileHandler(os.path.join(path,"log/namebb.log"))
     # logger.setLevel(logging.DEBUG)
     app.logger.addHandler(logger)
 
