@@ -2,9 +2,12 @@ __author__ = 'chenliang'
 
 #encoding = utf-8
 
-from flask import Flask, jsonify, request, render_template
+from flask import Flask, jsonify, request, render_template, current_app, logging
 import random
 import os
+
+from logging import handlers
+
 
 
 app = Flask(__name__)
@@ -15,6 +18,12 @@ girl_name_files = []
 
 boy_name_file_prefix = "split_boy"
 girl_name_file_prefix = "split_girl"
+
+def init_logging():
+    logger = handlers.RotatingFileHandler("./log/namebb.log")
+    # logger.setLevel(logging.DEBUG)
+    app.logger.addHandler(logger)
+
 
 def init_name_db():
     for root, dirs, files in os.walk("./data"):
@@ -35,6 +44,8 @@ def random_name():
     print "xnig --->", xing
     word_count = request.args.get('wordCount', 0)
     gender = request.args.get('gender', 'both')
+
+    current_app.logger.debug("shit")
 
     name = ""
     if (random.randint(0,1) == 0) :
@@ -60,6 +71,7 @@ def random_name(files):
         names = [name for name in name_file.read().decode("utf-8").split("\n") if name.strip() != ""]
         return names[random.randint(0, len(names)-1)]
 
+init_logging()
 init_name_db()
 
 if __name__ == '__main__':
