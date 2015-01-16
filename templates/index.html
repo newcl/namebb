@@ -49,7 +49,7 @@
                     html: ""
                 });
 
-                $.getJSON("/random", function (json) {
+                $.getJSON("/random",{"xing":babyXing}, function (json) {
 //                    alert(json.v);
                     $("#babyName").html(json.n);
 
