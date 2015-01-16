@@ -33,9 +33,11 @@ def init_logging():
 
 
 def init_name_db():
-    for root, dirs, files in os.walk("./data"):
-        boy_name_files.extend(["./data/" + file for file in files if file.startswith(boy_name_file_prefix)])
-        girl_name_files.extend(["./data/" + file for file in files if file.startswith(girl_name_file_prefix)])
+    path = os.path.dirname(os.path.realpath(__file__))
+    data_path = os.path.join(path, "data")
+    for root, dirs, files in os.walk(data_path):
+        boy_name_files.extend([os.path.join(data_path, file) for file in files if file.startswith(boy_name_file_prefix)])
+        girl_name_files.extend([os.path.join(data_path, file) for file in files if file.startswith(girl_name_file_prefix)])
 
 @app.route('/')
 def index():
