@@ -22,7 +22,7 @@ girl_name_file_prefix = "split_girl"
 def init_logging():
 
     path = os.path.dirname(os.path.realpath(__file__))
-    
+
     logger = handlers.RotatingFileHandler(os.path.join(path,"log/namebb.log"))
     # logger.setLevel(logging.DEBUG)
     app.logger.addHandler(logger)
@@ -48,13 +48,17 @@ def random_name():
     word_count = request.args.get('wordCount', 0)
     gender = request.args.get('gender', 'both')
 
-    current_app.logger.debug("shit")
+    current_app.logger.debug("xing={0} gender={1} word_count={2}".format(xing, gender, word_count))
 
     name = ""
     if (random.randint(0,1) == 0) :
+        current_app.logger.debug("generating boy name")
         name = random_boy_name();
     else:
+        current_app.logger.debug("generating girl name")
         name = random_girl_name();
+
+    current_app.logger.debug("about to return".format("{0}", name))
     return jsonify(n=name)
 
 
