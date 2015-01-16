@@ -1,2 +1,4 @@
-log
-log/namebb.log
+#log
+#log/namebb.log
+/log
+/log/*
