@@ -6,6 +6,10 @@ from flask import Flask, jsonify, request, render_template, current_app, logging
 import random
 import os
 
+import sys
+reload(sys)  # Reload does the trick!
+sys.setdefaultencoding('UTF8')
+
 from logging import handlers
 
 
