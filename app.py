@@ -23,6 +23,13 @@ girl_name_files = []
 boy_name_file_prefix = "split_boy"
 girl_name_file_prefix = "split_girl"
 
+unicode_to_reading = {}
+unicode_to_radical_count = {}
+unicode_to_radical = {}
+
+def unicode_to_key(u):
+    return "U+" + str(hex(ord(u)))[2:].upper()
+
 def init_logging():
 
     path = os.path.dirname(os.path.realpath(__file__))
@@ -31,10 +38,39 @@ def init_logging():
     # logger.setLevel(logging.DEBUG)
     app.logger.addHandler(logger)
 
-
-def init_name_db():
+def init_reading():
     path = os.path.dirname(os.path.realpath(__file__))
     data_path = os.path.join(path, "data")
+
+    with open(os.path.join(data_path, "read")) as read_file:
+        lines = [line.strip() for line in read_file.read().decode().split("\n") if line.strip() != ""]
+        for line in lines:
+            segments = line.split("\t")
+            unicode_to_reading[segments[0]] = segments[2]
+
+def init_stroke_count():
+    path = os.path.dirname(os.path.realpath(__file__))
+    data_path = os.path.join(path, "data")
+
+    with open(os.path.join(data_path, "strokes")) as read_file:
+        lines = read_file.read().decode().split("\n")
+        for line in lines:
+
+            segments = line.split("\t")
+            key = unicode_to_key(segments[1])
+            unicode_to_radical_count[key] = segments[2]
+            unicode_to_radical[key] = segments[11].strip()
+
+def init_data():
+    init_reading()
+    print "readings loaded:", len(unicode_to_reading)
+    init_stroke_count()
+    print "strokes loaded:", len(unicode_to_radical_count)
+
+
+def init_names():
+    path = os.path.dirname(os.path.realpath(__file__))
+    data_path = os.path.join(path, "names")
     for root, dirs, files in os.walk(data_path):
         boy_name_files.extend([os.path.join(data_path, file) for file in files if file.startswith(boy_name_file_prefix)])
         girl_name_files.extend([os.path.join(data_path, file) for file in files if file.startswith(girl_name_file_prefix)])
@@ -85,7 +121,17 @@ def random_name(files):
         return names[random.randint(0, len(names)-1)]
 
 init_logging()
-init_name_db()
+init_names()
+init_data()
+
+for i in range(0, 10):
+    name = random_boy_name()
+    for c in name:
+        print c
+        print unicode_to_reading[unicode_to_key(c)],
+    print
+
+
 
 if __name__ == '__main__':
     app.run(host='0.0.0.0')

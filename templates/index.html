@@ -1,18 +1,36 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Page Title</title>
+    <title>起名星</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" href="../static/jquery.mobile-1.4.5.css">
-
+    <link rel="stylesheet" type="text/css" href="../static/style.css">
 
     <script src="../static/jquery-1.11.2.js"></script>
     <script src="../static/jquery.mobile-1.4.5.js"></script>
+
     <script>
         var babyNameWordCount = 0;
         var babyGender = "both";
         var babyXing = "";
 
+        function getNextName() {
+            $.mobile.loading( 'show', {
+                text:"",
+                textVisible: false,
+                theme: 'z',
+                html: ""
+            });
+
+            $.getJSON("/random",{"xing":babyXing}, function (json) {
+//                    alert(json.v);
+                $("#babyNameXing").html(babyXing)
+                $("#babyNameName1").html(json.n[0]);
+                $("#babyNameName2").html(json.n[1]);
+                $.mobile.loading( 'hide');
+            });
+        }
 
         $(document).ready(function () {
 
@@ -38,23 +56,12 @@
             $("#settingOk").click(function () {
 //                $( "#settingPage" ).dialog( "close" );
                 $.mobile.changePage('#mainPage', 'pop', true, true);
+                getNextName();
 //                window.location = "#main";
             });
 
             $("#nextName").click(function () {
-                $.mobile.loading( 'show', {
-                    text:"",
-                    textVisible: false,
-                    theme: 'z',
-                    html: ""
-                });
-
-                $.getJSON("/random",{"xing":babyXing}, function (json) {
-//                    alert(json.v);
-                    $("#babyName").html(json.n);
-
-                    $.mobile.loading( 'hide');
-                });
+                getNextName();
             });
 //
 //            $("#rank_name_button").click(function () {
@@ -86,7 +93,12 @@
     <!-- /header -->
 
     <div role="main" class="ui-content">
-        <div id="babyName">
+        <div id ="babyName">
+            <div id="babyNameXing" class="babyNameXing"></div>
+            <div id="babyNameName1" class="babyNameName1"></div>
+            <div id="babyNameName2" class="babyNameName2"></div>
+        </div>
+        <div style="clear:both">
         </div>
         <button id="nextName" class="ui-btn">下一个</button>
     </div>
