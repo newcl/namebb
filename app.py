@@ -45,36 +45,44 @@ def init_names():
 def index():
     return render_template("index.html")
 
-#
-# type 1 for random character
-# type 2 for random poem line
-#
+
+def random_name():
+    if (random.randint(0,1) == 0) :
+        current_app.logger.debug("generating boy name")
+        return random_boy_name();
+    else:
+        current_app.logger.debug("generating girl name")
+        return random_girl_name();
+
 @app.route('/random')
 def random_name():
-    xing = request.args.get('xing', '')
+    xing = request.args.get('xing')
     word_count = request.args.get('wordCount', 0)
     gender = request.args.get('gender', 'both')
 
     current_app.logger.debug("xing={0} gender={1} word_count={2}".format(xing, gender, word_count))
 
     name = ""
-    if (random.randint(0,1) == 0) :
-        current_app.logger.debug("generating boy name")
-        name = random_boy_name();
+    if gender == "male":
+        name = random_boy_name()
+        current_app.logger.debug("random boy name={0} for xing{1}".format())
+    elif gender == "female":
+        name = random_girl_name()
     else:
-        current_app.logger.debug("generating girl name")
-        name = random_girl_name();
+        name = random_name()
 
+    whole_name = xing + name
 
-    name = xing + name
+    reading = get_reading_for_name(whole_name)
 
-    reading = get_reading_for_name(name)
+    current_app.logger.debug("name={0} reading={1}".format(whole_name, "".join(reading)))
 
-    current_app.logger.debug("name={0} reading={1}".format(name, "".join(reading)))
-
-    return jsonify(n=[c for c in name], r=reading)
+    return jsonify(n=[c for c in whole_name], r=reading)
 
 # unicode pinyin radical stroke-count
+
+# def get_name(gender="both", word_count=0):
+
 
 def get_reading_for_character(c):
     return all_gbk_characters[c][1]
@@ -209,15 +217,13 @@ def get_tian_ge(xing):
         return sum([get_stroke_count_for_character(c) for c in xing])
 
 def init_data():
+    # unicode pinyin radical stroke-count
     with open(get_relative_path(__file__, "data/data")) as data_file:
         lines = [line for line in data_file.read().decode("utf-8").split("\n") if line.strip() != ""]
-        print "--->", len(lines)
         for line in lines:
             fields = line.split("\t")
             all_gbk_characters[fields[0]] = fields
 
-
-    print len(all_gbk_characters)
 init_logging()
 init_names()
 init_data()
