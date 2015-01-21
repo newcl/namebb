@@ -2,74 +2,103 @@
 
 __author__ = 'chenliang'
 
-
-
-from flask import Flask, jsonify, request, render_template, current_app, logging
+from flask import Flask, jsonify, request, render_template, current_app, logging, ext
 import random
 import os
 
 import sys
+
+from name_data import *
+
 reload(sys)  # Reload does the trick!
 sys.setdefaultencoding('UTF8')
 
 from logging import handlers
 from util import *
+# from flask_pymongo import PyMongo
+
 
 app = Flask(__name__)
+
 app.debug = True
 
-boy_name_files = []
-girl_name_files = []
+boy_name_one_character_files = []
+boy_name_two_character_files = []
 
-boy_name_file_prefix = "split_boy"
-girl_name_file_prefix = "split_girl"
+girl_name_one_character_files = []
+girl_name_two_character_files = []
 
 all_gbk_characters = {}
 
-def init_logging():
 
-    path = get_relative_path(__file__,"log/namebb.log")
+def init_logging():
+    path = get_relative_path(__file__, "log/namebb.log")
 
     logger = handlers.RotatingFileHandler(path)
     # logger.setLevel(logging.DEBUG)
     app.logger.addHandler(logger)
 
-def init_names():
-    data_path = get_relative_path(__file__, "names")
 
-    for root, dirs, files in os.walk(data_path):
-        boy_name_files.extend([os.path.join(data_path, file) for file in files if file.startswith(boy_name_file_prefix)])
-        girl_name_files.extend([os.path.join(data_path, file) for file in files if file.startswith(girl_name_file_prefix)])
+
+
 
 @app.route('/')
 def index():
     return render_template("index.html")
 
 
-def random_name():
-    if (random.randint(0,1) == 0) :
-        current_app.logger.debug("generating boy name")
-        return random_boy_name();
+def get_name(xing, word_count, gender):
+    gender_for_data = ""
+    if gender == "male":
+        gender_for_data = "boy"
+    elif gender == "female":
+        gender_for_data = "girl"
     else:
-        current_app.logger.debug("generating girl name")
-        return random_girl_name();
+        if random.randint(0, 1) == 0:
+            gender_for_data = "boy"
+        else:
+            gender_for_data = "girl"
+
+    word_count_for_data = 1
+    if word_count == 1:
+        word_count_for_data = 1
+    elif word_count == 2:
+        word_count_for_data = 2
+    else:
+        if random.randint(0, 1) == 0:
+            word_count_for_data = 1
+        else:
+            word_count_for_data = 2
+
+    target_files = []
+
+    if gender_for_data == "boy" and word_count_for_data == 1:
+        target_files = boy_name_one_character_files
+    elif gender_for_data == "boy" and word_count_for_data == 2:
+        target_files = boy_name_two_character_files
+
+    if gender_for_data == "girl" and word_count_for_data == 1:
+        target_files = girl_name_one_character_files
+    elif gender_for_data == "girl" and word_count_for_data == 2:
+        target_files = girl_name_two_character_files
+
+    target_file_path = target_files[random.randint(0, len(target_files) - 1)]
+
+    with open(target_file_path) as name_file:
+        names = [name for name in name_file.read().decode("utf-8").split("\n") if name.strip() != ""]
+
+        return names[random.randint(0, len(names) - 1)]
+
 
 @app.route('/random')
 def random_name():
     xing = request.args.get('xing')
-    word_count = request.args.get('wordCount', 0)
-    gender = request.args.get('gender', 'both')
+    word_count = request.args.get('word_count')
+    gender = request.args.get('gender')
 
     current_app.logger.debug("xing={0} gender={1} word_count={2}".format(xing, gender, word_count))
 
-    name = ""
-    if gender == "male":
-        name = random_boy_name()
-        current_app.logger.debug("random boy name={0} for xing{1}".format())
-    elif gender == "female":
-        name = random_girl_name()
-    else:
-        name = random_name()
+    name = get_name(xing, word_count, gender)
 
     whole_name = xing + name
 
@@ -79,6 +108,7 @@ def random_name():
 
     return jsonify(n=[c for c in whole_name], r=reading)
 
+
 # unicode pinyin radical stroke-count
 
 # def get_name(gender="both", word_count=0):
@@ -87,31 +117,31 @@ def random_name():
 def get_reading_for_character(c):
     return all_gbk_characters[c][1]
 
+
 def get_reading_for_name(name):
     return [get_reading_for_character(c) for c in name]
+
 
 def get_radical_for_xing(xing):
     assert len(xing) == 1
     return all_gbk_characters[xing][2]
 
+
 def get_stroke_count_for_character(c):
     return all_gbk_characters[c][3]
+
 
 @app.route('/rank')
 def rank_name():
     return jsonify(score=random.randint(0, 100), name=request.args.get('name', ''))
 
-def random_boy_name():
-    return random_name(boy_name_files)
-
-def random_girl_name():
-    return random_name(girl_name_files)
 
 def random_name(files):
-    name_file_path = files[random.randint(0, len(files)-1)]
+    name_file_path = files[random.randint(0, len(files) - 1)]
     with open(name_file_path) as name_file:
         names = [name for name in name_file.read().decode("utf-8").split("\n") if name.strip() != ""]
-        return names[random.randint(0, len(names)-1)]
+        return names[random.randint(0, len(names) - 1)]
+
 
 # 3、计天格法：如是复姓，姓的笔画相加，得出天格数；如是单姓，姓的笔画加一得出天格数。
 # 4、计人格法：复姓复名姓氏的第二个字笔画加名的第一个字的笔画；复姓单名姓氏的第二个字加名的笔画；单姓复名是姓的笔画加名字的第一个字笔画；单姓单名是姓名相加的笔画数。
@@ -148,7 +178,6 @@ def get_wu_ge_attribute(ge):
         wu_xing = "水"
 
     return yin_yang + wu_xing
-
 
 
 def get_wu_ge(xing, name):
@@ -192,8 +221,10 @@ def get_wai_ge(xing, name):
     elif xing_count == 1 and name_count == 1:
         return 2
 
+
 def get_zong_ge(xing, name):
-    return sum([get_stroke_count_for_character(c) for c in xing+name])
+    return sum([get_stroke_count_for_character(c) for c in xing + name])
+
 
 def get_di_ge(name):
     count = len(name)
@@ -202,12 +233,14 @@ def get_di_ge(name):
     elif count == 2:
         return sum(get_stroke_count_for_character(c) for c in name)
 
+
 def get_ren_ge(xing, name):
     count = len(xing)
     if count == 1:
         return get_stroke_count_for_character(xing[0]) + get_stroke_count_for_character(name[0])
     elif count == 2:
         return get_stroke_count_for_character(xing[1]) + get_stroke_count_for_character(name[0])
+
 
 def get_tian_ge(xing):
     count = len(xing)
@@ -216,18 +249,11 @@ def get_tian_ge(xing):
     elif count == 2:
         return sum([get_stroke_count_for_character(c) for c in xing])
 
-def init_data():
-    # unicode pinyin radical stroke-count
-    with open(get_relative_path(__file__, "data/data")) as data_file:
-        lines = [line for line in data_file.read().decode("utf-8").split("\n") if line.strip() != ""]
-        for line in lines:
-            fields = line.split("\t")
-            all_gbk_characters[fields[0]] = fields
 
 init_logging()
-init_names()
-init_data()
 
+boy_name_one_character_files, boy_name_two_character_files, girl_name_one_character_files, girl_name_two_character_files = init_names(get_relative_path(__file__, "names"))
+all_gbk_characters = load_name_data(get_relative_path(__file__, "data/character_data"))
 
 if __name__ == '__main__':
     app.run(host='0.0.0.0')
