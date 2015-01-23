@@ -2,19 +2,19 @@
 
 __author__ = 'chenliang'
 
-from flask import Flask, jsonify, request, render_template, current_app, logging
 import random
-import os
-
 import sys
+import name_data
+import poem
+import wu_ge
 
-from name_data import *
+from flask import Flask, jsonify, request, render_template
+
 
 reload(sys)  # Reload does the trick!
 sys.setdefaultencoding('UTF8')
 
 from logging import handlers
-from util import *
 from wu_ge import *
 from poem import *
 from name_data import *
