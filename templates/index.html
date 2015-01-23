@@ -9,145 +9,107 @@
 
     <script src="../static/jquery-1.11.2.js"></script>
     <script src="../static/jquery.mobile-1.4.5.js"></script>
+    <script src="../static/Chart.js"></script>
+    <script src="../static/namebb.js"></script>
 
-    <script>
-        var babyNameWordCount = 0;
-        var babyGender = "both";
-        var babyXing = "";
-
-        function getNextName() {
-            $.mobile.loading( 'show', {
-                text:"",
-                textVisible: false,
-                theme: 'z',
-                html: ""
-            });
-
-            $.getJSON("/random",{"xing":babyXing}, function (json) {
-//                    alert(json.v);
-                $("#babyNameXing").html(babyXing)
-                $("#babyNameName1").html(json.n[0]);
-                $("#babyNameName2").html(json.n[1]);
-                $.mobile.loading( 'hide');
-            });
-        }
-
-        $(document).ready(function () {
-
-//            $("#settingOk").disabled = babyXing == "" ? "disabled" : "enabled";
-//            if (babyXing == "") {
-//                alert("shit");
-//                $.mobile.changePage('#settingPage', 'pop', true, true);
-////                $( "#settingPage" ).popup( "open" )
-//            }
-                $.mobile.changePage('#settingPage', 'pop', true, true);
-            $("#babyXingText").bind('input', function () {
-                babyXing = $("#babyXingText").val();
-                $("#settingOk").prop("disabled", babyXing == "" ? true : false);
-            });
-            $("#gender").change(function () {
-                babyGender = $("input:radio[name='gender']:checked").val();
-            });
-
-            $("#wordCount").change(function () {
-                babyNameWordCount = $("input:radio[name='wordCount']:checked").val();
-            });
-
-            $("#settingOk").click(function () {
-//                $( "#settingPage" ).dialog( "close" );
-                $.mobile.changePage('#mainPage', 'pop', true, true);
-                getNextName();
-//                window.location = "#main";
-            });
-
-            $("#nextName").click(function () {
-                getNextName();
-            });
-//
-//            $("#rank_name_button").click(function () {
-//                $.getJSON("/rank", {
-//                    name:$("#rank_content").html
-//                }, function(json){
-//                    $("#rank_score").html(json.score);
-//
-//                });
-//            });
-        });
-
-        $( document ).bind( 'mobileinit', function(){
-//            $.mobile.loader.prototype.options.text = "";
-//            $.mobile.loader.prototype.options.textVisible = false;
-//            $.mobile.loader.prototype.options.theme = "";
-//            $.mobile.loader.prototype.options.html = "";
-        });
-    </script>
 </head>
 <body>
 
 <!-- Start of first page: #one -->
 <div data-role="page" id="mainPage">
 
-    <div data-role="header" data-theme="b">
+    <div data-role="header">
         <h1>起名星-宝宝版</h1>
     </div>
     <!-- /header -->
 
     <div role="main" class="ui-content">
-        <div id ="babyName">
-            <div id="babyNameXing" class="babyNameXing"></div>
-            <div id="babyNameName1" class="babyNameName1"></div>
-            <div id="babyNameName2" class="babyNameName2"></div>
+        <div style="text-align: center;">
+            <div id="babyName">
+                <!--<div style="float: left">-->
+                <!--<div id="babyName0" class="babyName0"></div>-->
+                <!--<div id="babyNamePinYin0" class="babyNamePinYin0"></div>-->
+                <!--</div>-->
+
+                <!--<div style="display: inline-block;">-->
+                <!--<div id="babyName1" class="babyName1"></div>-->
+                <!--<div id="babyNamePinYin1" class="babyNamePinYin1"></div>-->
+                <!--</div>-->
+
+                <!--<div style="float: right;">-->
+                <!--<div id="babyName2" class="babyName2"></div>-->
+                <!--<div id="babyNamePinYin2" class="babyNamePinYin2"></div>-->
+                <!--</div>-->
+
+                <!--<div style="clear:both">-->
+                <!--</div>-->
+            </div>
         </div>
-        <div style="clear:both">
-        </div>
+
+
+        <div style="clear:both"></div>
+
+        <!--<div style="background: green;height: 100px">-->
+
+    </div>
+
+    <div style="width: 100px;margin-left: auto;margin-right: auto" ;>
         <button id="nextName" class="ui-btn">下一个</button>
     </div>
-    <!-- /content -->
 
-    <!--<div data-role="footer" data-theme="a">-->
-    <!--<h4>Page Footer</h4>-->
-    <!--</div>-->
-    <!-- /footer -->
+    <div style="margin-left: auto;margin-right: auto;margin-top: 40px">
+        <canvas id="myChart" width="200" height="200"
+                style="margin-left: auto;margin-right:auto;display: block"></canvas>
+    </div>
+
+</div>
+<!-- /content -->
+
+<!--<div data-role="footer" data-theme="a">-->
+<!--<h4>Page Footer</h4>-->
+<!--</div>-->
+<!-- /footer -->
 </div>
 <!-- /page one -->
 <!-- Start of third page: #popup -->
 <div data-role="page" id="settingPage">
 
-    <div data-role="header" data-theme="b">
+    <div data-role="header">
         <h1>起名星-宝宝版</h1>
     </div>
     <!-- /header -->
 
-    <div role="main" class="ui-content" data-theme="b">
-        <div><h2>宝宝姓什么：</h2><input id="babyXingText"></div>
+    <div role="main" class="ui-content jqm-content">
+        宝宝姓什么：<input id="babyXingText">
 
-        <form id="xx">
-            <fieldset id="gender" data-role="controlgroup" data-type="horizontal">
-                        
-                <h2>
+        <div>
+            <form>
+                <fieldset id="gender" data-role="controlgroup" data-type="horizontal" data-mini="true">
                     <legend>宝宝性别:</legend>
-                </h2>
-                        <input type="radio" name="gender" id="male" value="male">
-                        <label for="male">男宝宝</label>
-                        <input type="radio" name="gender" id="female" value="female">
-                        <label for="female">女宝宝</label>
-                        <input type="radio" name="gender" id="gender_both" value="both" checked="checked">
-                        <label for="gender_both">还不知道呢</label>    
-            </fieldset>
+                    <input type="radio" name="gender" id="male" value="male">
+                    <label for="male">男宝宝</label>
+                    <input type="radio" name="gender" id="female" value="female">
+                    <label for="female">女宝宝</label>
+                    <input type="radio" name="gender" id="gender_both" value="both" checked="checked">
+                    <label for="gender_both">还不知道呢</label>    
+                </fieldset>
 
-            <fieldset id="wordCount" data-role="controlgroup" data-type="horizontal">
-                        
-                <h2>
+            </form>
+        </div>
+        <div>
+            <form>
+                <fieldset id="wordCount" data-role="controlgroup" data-type="horizontal" data-mini="true">
                     <legend>名字字数:</legend>
-                </h2>
-                        <input type="radio" name="wordCount" id="twoWords" value="2">
-                        <label for="twoWords">单字</label>
-                        <input type="radio" name="wordCount" id="threeWords" value="3">
-                        <label for="threeWords">双字</label>
-                     <input type="radio" name="wordCount" id="wordCountBoth" value="0" checked="checked">
-                        <label for="wordCountBoth">都可以</label>
-            </fieldset>
-        </form>
+                    <input type="radio" name="wordCount" id="twoWords" value="1">
+                    <label for="twoWords">单字</label>
+                    <input type="radio" name="wordCount" id="threeWords" value="2">
+                    <label for="threeWords">双字</label>
+                    <input type="radio" name="wordCount" id="wordCountBoth" value="0" checked="checked">
+                    <label for="wordCountBoth">都行</label>
+                </fieldset>
+            </form>
+        </div>
+
         <div>
             <button id="settingOk" class="ui-btn" disabled="disabled">马上去找名字!</button>
             <!--<a href="#mainPage" data-rel="back" data-role="button" data-inline="true" data-icon="back">马上去找名字!</a>-->

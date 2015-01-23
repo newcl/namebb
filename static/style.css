@@ -137,13 +137,17 @@
 /*#login_button div span {font-size:16px;color:#FFF;display:inline-block; margin:10px 0 10px 4px;}*/
 
 #babyName {
-    text-align: center;
+
     margin: auto;
-    width: 30%;
-
-
-    margin-top: 20px;
-    margin-bottom: 20px;
+    /*width: 200px;*/
+    /*height: 100px;*/
+    /*background: green;*/
+    display: inline-block;
+    /*height: 100px;*/
+    /*margin-top: 20px;*/
+    /*margin-bottom: 20px;*/
+    /*padding: 30px;*/
+    /*background: red;*/
 }
 
 /*#babyName {*/
@@ -161,32 +165,62 @@
     /*background-color: #FFA500;*/
 /*}*/
 
-#babyNameXing {
-    width: 33%;
+/*.babyName0 {*/
+    /*width: 33%;*/
     /*height: 200px;*/
     /*background-color: #A52A2A;*/
-    float: left;
+    /*float: left;*/
     /*background: red;*/
-    text-align: center;
-    font-size: 70px;
-}
+    /*text-align: center;*/
+    /*font-size: large;*/
+/*}*/
 
-#babyNameName1 {
-    width: 34%;
+/*.babyName1 {*/
+    /*width: 34%;*/
     /*height: 200px;*/
     /*background-color: #FFA500;*/
     /*background: green;*/
-    float: left;
-    text-align: center;
-    font-size: 70px;
-}
+    /*float: left;*/
+    /*text-align: center;*/
+    /*font-size: large;*/
+/*}*/
 
-#babyNameName2 {
-    width: 33%;
+/*.babyName2 {*/
+    /*width: 33%;*/
     /*height: 200px;*/
     /*background-color: #008000;*/
-    float: left;
+    /*float: left;*/
     /*background: blue;*/
-    text-align: center;
-    font-size: 70px;
-}
+    /*text-align: center;*/
+    /*font-size: large;*/
+/*}*/
+
+/*.babyNamePinYin0 {*/
+    /*width: 33%;*/
+    /*height: 200px;*/
+    /*background-color: #A52A2A;*/
+    /*float: left;*/
+    /*background: red;*/
+    /*text-align: center;*/
+    /*font-size: medium;*/
+/*}*/
+
+/*.babyNamePinYin1 {*/
+    /*width: 34%;*/
+    /*height: 200px;*/
+    /*background-color: #FFA500;*/
+    /*background: green;*/
+    /*float: left;*/
+    /*text-align: center;*/
+    /*font-size: medium;*/
+/*}*/
+
+/*.babyNamePinYin2 {*/
+    /*width: 33%;*/
+    /*height: 200px;*/
+    /*background-color: #008000;*/
+    /*float: left;*/
+    /*background: blue;*/
+    /*text-align: center;*/
+    /*font-size: medium;*/
+/*}*/

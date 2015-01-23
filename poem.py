@@ -16,12 +16,14 @@ def process_chu_ci():
         # print data_file_content
 
         # poems = re.findall(ur'(^[^\s].*$\n)((^($|^\s+.*$)\n)+)', data_file_content, re.MULTILINE)
-        poems = re.findall(ur'(^[^\s].*$\n)((^[^\w].*$\n)+)', data_file_content, re.MULTILINE)
+        # poems = re.findall(ur'(^[\S].*$\n)((^$\n|^\s+.*\n)*)(?!^\S)', data_file_content, re.MULTILINE)
+        poems = re.findall(ur'(^[\S].*$\n)((^$\n|^\s+.*\n)+)', data_file_content, re.MULTILINE)
         print len(poems)
-
         for poem in poems:
+            print len(poem)
             print "--->".join(poem)
-            # print poem
+            # for p in poem:
+            #     print p
 
 
 # process_chu_ci()
@@ -54,3 +56,12 @@ def get_all_characters_in_poem():
 # generate_all_characters_in_poems()
 
 # print "importing opem"
+
+
+def get_poem_score(name):
+    count = len(filter(lambda c:c in all_characters_in_poems, name))
+    return int(count*1.0*100/len(name))
+
+
+all_characters_in_poems = get_all_characters_in_poem()
+# process_chu_ci()
