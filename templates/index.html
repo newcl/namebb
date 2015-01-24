@@ -17,9 +17,9 @@
 
 <!-- Start of first page: #one -->
 <div data-role="page" id="mainPage">
-
     <div data-role="header">
         <h1>起名星-宝宝版</h1>
+        <a href="#moreSetting" data-icon="bars" data-iconpos="notext">Menu</a>
     </div>
     <!-- /header -->
 
@@ -50,16 +50,38 @@
         <div style="clear:both"></div>
 
         <!--<div style="background: green;height: 100px">-->
+        <div style="width: 100px;margin-left: auto;margin-right: auto" ;>
+            <button id="nextName" class="ui-btn">下一个</button>
+        </div>
 
+        <div style="margin-left: auto;margin-right: auto;margin-top: 40px">
+            <canvas id="myChart" width="200" height="200"
+                    style="margin-left: auto;margin-right:auto;display: block"></canvas>
+        </div>
     </div>
 
-    <div style="width: 100px;margin-left: auto;margin-right: auto" ;>
-        <button id="nextName" class="ui-btn">下一个</button>
-    </div>
 
-    <div style="margin-left: auto;margin-right: auto;margin-top: 40px">
-        <canvas id="myChart" width="200" height="200"
-                style="margin-left: auto;margin-right:auto;display: block"></canvas>
+    <div data-role="panel" data-position-fixed="true" data-display="overlay" id="moreSetting">
+        <form>
+            <fieldset id="gender" data-role="controlgroup" data-type="horizontal" data-mini="true">
+                <input type="radio" name="gender" id="male" value="male">
+                <label for="male">男宝宝</label>
+                <input type="radio" name="gender" id="female" value="female">
+                <label for="female">女宝宝</label>
+                <input type="radio" name="gender" id="gender_both" value="both" checked="checked">
+                <label for="gender_both">还不知道呢</label>    
+            </fieldset>
+        </form>
+        <form>
+            <fieldset id="wordCount" data-role="controlgroup" data-type="horizontal" data-mini="true">
+                <input type="radio" name="wordCount" id="twoWords" value="1">
+                <label for="twoWords">单字</label>
+                <input type="radio" name="wordCount" id="threeWords" value="2">
+                <label for="threeWords">双字</label>
+                <input type="radio" name="wordCount" id="wordCountBoth" value="0" checked="checked">
+                <label for="wordCountBoth">都行</label>
+            </fieldset>
+        </form>
     </div>
 
 </div>
@@ -80,8 +102,10 @@
     <!-- /header -->
 
     <div role="main" class="ui-content jqm-content">
-        宝宝姓什么：<input id="babyXingText">
-
+        <div>
+            <label for="babyXingText">宝宝姓什么：</label>
+            <input type="text" name="babyXingText" id="babyXingText" placeholder="赵钱孙李周吴郑王" value="">
+        </div>
         <div>
             <form>
                 <fieldset id="gender" data-role="controlgroup" data-type="horizontal" data-mini="true">
@@ -122,6 +146,8 @@
     <!--</div>&lt;!&ndash; /footer &ndash;&gt;-->
 </div>
 <!-- /page popup -->
+
+
 
 </body>
 <

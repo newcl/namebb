@@ -576,3 +576,27 @@
 2015-01-21T15:03:51.486+0800 [initandlisten] shutdown: closing all files...
 2015-01-21T15:03:51.487+0800 [initandlisten] closeAllFiles() finished
 2015-01-21T15:03:51.487+0800 [initandlisten] dbexit: really exiting now
+2015-01-23T21:08:16.964+0800 ***** SERVER RESTARTED *****
+2015-01-23T21:08:17.112+0800 [initandlisten] MongoDB starting : pid=628 port=27017 dbpath=/Users/chenliang/git_projects/namebb/db 64-bit host=chenliang.local
+2015-01-23T21:08:17.113+0800 [initandlisten] db version v2.6.5
+2015-01-23T21:08:17.113+0800 [initandlisten] git version: nogitversion
+2015-01-23T21:08:17.113+0800 [initandlisten] build info: Darwin miniyosemite.local 14.0.0 Darwin Kernel Version 14.0.0: Fri Sep 19 00:26:44 PDT 2014; root:xnu-2782.1.97~2/RELEASE_X86_64 x86_64 BOOST_LIB_VERSION=1_49
+2015-01-23T21:08:17.113+0800 [initandlisten] allocator: tcmalloc
+2015-01-23T21:08:17.113+0800 [initandlisten] options: { command: [ "run" ], config: "/usr/local/etc/mongod.conf", net: { bindIp: "127.0.0.1" }, storage: { dbPath: "/Users/chenliang/git_projects/namebb/db" }, systemLog: { destination: "file", logAppend: true, path: "/Users/chenliang/git_projects/namebb/mongo.log" } }
+2015-01-23T21:08:17.155+0800 [initandlisten] exception in initAndListen: 10296 
+*********************************************************************
+ ERROR: dbpath (/Users/chenliang/git_projects/namebb/db) does not exist.
+ Create this directory or give existing directory in --dbpath.
+ See http://dochub.mongodb.org/core/startingandstoppingmongo
+*********************************************************************
+, terminating
+2015-01-23T21:08:17.155+0800 [initandlisten] dbexit: 
+2015-01-23T21:08:17.155+0800 [initandlisten] shutdown: going to close listening sockets...
+2015-01-23T21:08:17.155+0800 [initandlisten] shutdown: going to flush diaglog...
+2015-01-23T21:08:17.155+0800 [initandlisten] shutdown: going to close sockets...
+2015-01-23T21:08:17.156+0800 [initandlisten] shutdown: waiting for fs preallocator...
+2015-01-23T21:08:17.156+0800 [initandlisten] shutdown: lock for final commit...
+2015-01-23T21:08:17.156+0800 [initandlisten] shutdown: final commit...
+2015-01-23T21:08:17.156+0800 [initandlisten] shutdown: closing all files...
+2015-01-23T21:08:17.156+0800 [initandlisten] closeAllFiles() finished
+2015-01-23T21:08:17.156+0800 [initandlisten] dbexit: really exiting now
