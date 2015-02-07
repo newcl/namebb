@@ -600,3 +600,291 @@
 2015-01-23T21:08:17.156+0800 [initandlisten] shutdown: closing all files...
 2015-01-23T21:08:17.156+0800 [initandlisten] closeAllFiles() finished
 2015-01-23T21:08:17.156+0800 [initandlisten] dbexit: really exiting now
+2015-01-27T22:20:41.393+0800 ***** SERVER RESTARTED *****
+2015-01-27T22:20:41.439+0800 [initandlisten] MongoDB starting : pid=427 port=27017 dbpath=/Users/chenliang/git_projects/namebb/db 64-bit host=chenliang.local
+2015-01-27T22:20:41.439+0800 [initandlisten] db version v2.6.5
+2015-01-27T22:20:41.439+0800 [initandlisten] git version: nogitversion
+2015-01-27T22:20:41.439+0800 [initandlisten] build info: Darwin miniyosemite.local 14.0.0 Darwin Kernel Version 14.0.0: Fri Sep 19 00:26:44 PDT 2014; root:xnu-2782.1.97~2/RELEASE_X86_64 x86_64 BOOST_LIB_VERSION=1_49
+2015-01-27T22:20:41.439+0800 [initandlisten] allocator: tcmalloc
+2015-01-27T22:20:41.439+0800 [initandlisten] options: { command: [ "run" ], config: "/usr/local/etc/mongod.conf", net: { bindIp: "127.0.0.1" }, storage: { dbPath: "/Users/chenliang/git_projects/namebb/db" }, systemLog: { destination: "file", logAppend: true, path: "/Users/chenliang/git_projects/namebb/mongo.log" } }
+2015-01-27T22:20:41.439+0800 [initandlisten] exception in initAndListen: 10296 
+*********************************************************************
+ ERROR: dbpath (/Users/chenliang/git_projects/namebb/db) does not exist.
+ Create this directory or give existing directory in --dbpath.
+ See http://dochub.mongodb.org/core/startingandstoppingmongo
+*********************************************************************
+, terminating
+2015-01-27T22:20:41.439+0800 [initandlisten] dbexit: 
+2015-01-27T22:20:41.439+0800 [initandlisten] shutdown: going to close listening sockets...
+2015-01-27T22:20:41.439+0800 [initandlisten] shutdown: going to flush diaglog...
+2015-01-27T22:20:41.439+0800 [initandlisten] shutdown: going to close sockets...
+2015-01-27T22:20:41.439+0800 [initandlisten] shutdown: waiting for fs preallocator...
+2015-01-27T22:20:41.439+0800 [initandlisten] shutdown: lock for final commit...
+2015-01-27T22:20:41.439+0800 [initandlisten] shutdown: final commit...
+2015-01-27T22:20:41.439+0800 [initandlisten] shutdown: closing all files...
+2015-01-27T22:20:41.439+0800 [initandlisten] closeAllFiles() finished
+2015-01-27T22:20:41.439+0800 [initandlisten] dbexit: really exiting now
+2015-01-27T22:25:37.008+0800 ***** SERVER RESTARTED *****
+2015-01-27T22:25:37.038+0800 [initandlisten] MongoDB starting : pid=350 port=27017 dbpath=/Users/chenliang/git_projects/namebb/db 64-bit host=chenliang.local
+2015-01-27T22:25:37.038+0800 [initandlisten] db version v2.6.5
+2015-01-27T22:25:37.038+0800 [initandlisten] git version: nogitversion
+2015-01-27T22:25:37.038+0800 [initandlisten] build info: Darwin miniyosemite.local 14.0.0 Darwin Kernel Version 14.0.0: Fri Sep 19 00:26:44 PDT 2014; root:xnu-2782.1.97~2/RELEASE_X86_64 x86_64 BOOST_LIB_VERSION=1_49
+2015-01-27T22:25:37.038+0800 [initandlisten] allocator: tcmalloc
+2015-01-27T22:25:37.038+0800 [initandlisten] options: { command: [ "run" ], config: "/usr/local/etc/mongod.conf", net: { bindIp: "127.0.0.1" }, storage: { dbPath: "/Users/chenliang/git_projects/namebb/db" }, systemLog: { destination: "file", logAppend: true, path: "/Users/chenliang/git_projects/namebb/mongo.log" } }
+2015-01-27T22:25:37.039+0800 [initandlisten] exception in initAndListen: 10296 
+*********************************************************************
+ ERROR: dbpath (/Users/chenliang/git_projects/namebb/db) does not exist.
+ Create this directory or give existing directory in --dbpath.
+ See http://dochub.mongodb.org/core/startingandstoppingmongo
+*********************************************************************
+, terminating
+2015-01-27T22:25:37.039+0800 [initandlisten] dbexit: 
+2015-01-27T22:25:37.039+0800 [initandlisten] shutdown: going to close listening sockets...
+2015-01-27T22:25:37.039+0800 [initandlisten] shutdown: going to flush diaglog...
+2015-01-27T22:25:37.039+0800 [initandlisten] shutdown: going to close sockets...
+2015-01-27T22:25:37.039+0800 [initandlisten] shutdown: waiting for fs preallocator...
+2015-01-27T22:25:37.039+0800 [initandlisten] shutdown: lock for final commit...
+2015-01-27T22:25:37.039+0800 [initandlisten] shutdown: final commit...
+2015-01-27T22:25:37.039+0800 [initandlisten] shutdown: closing all files...
+2015-01-27T22:25:37.039+0800 [initandlisten] closeAllFiles() finished
+2015-01-27T22:25:37.039+0800 [initandlisten] dbexit: really exiting now
+2015-01-28T08:05:09.922+0800 ***** SERVER RESTARTED *****
+2015-01-28T08:05:10.007+0800 [initandlisten] MongoDB starting : pid=435 port=27017 dbpath=/Users/chenliang/git_projects/namebb/db 64-bit host=chenliang.local
+2015-01-28T08:05:10.007+0800 [initandlisten] db version v2.6.5
+2015-01-28T08:05:10.007+0800 [initandlisten] git version: nogitversion
+2015-01-28T08:05:10.007+0800 [initandlisten] build info: Darwin miniyosemite.local 14.0.0 Darwin Kernel Version 14.0.0: Fri Sep 19 00:26:44 PDT 2014; root:xnu-2782.1.97~2/RELEASE_X86_64 x86_64 BOOST_LIB_VERSION=1_49
+2015-01-28T08:05:10.007+0800 [initandlisten] allocator: tcmalloc
+2015-01-28T08:05:10.007+0800 [initandlisten] options: { command: [ "run" ], config: "/usr/local/etc/mongod.conf", net: { bindIp: "127.0.0.1" }, storage: { dbPath: "/Users/chenliang/git_projects/namebb/db" }, systemLog: { destination: "file", logAppend: true, path: "/Users/chenliang/git_projects/namebb/mongo.log" } }
+2015-01-28T08:05:10.007+0800 [initandlisten] exception in initAndListen: 10296 
+*********************************************************************
+ ERROR: dbpath (/Users/chenliang/git_projects/namebb/db) does not exist.
+ Create this directory or give existing directory in --dbpath.
+ See http://dochub.mongodb.org/core/startingandstoppingmongo
+*********************************************************************
+, terminating
+2015-01-28T08:05:10.007+0800 [initandlisten] dbexit: 
+2015-01-28T08:05:10.007+0800 [initandlisten] shutdown: going to close listening sockets...
+2015-01-28T08:05:10.007+0800 [initandlisten] shutdown: going to flush diaglog...
+2015-01-28T08:05:10.007+0800 [initandlisten] shutdown: going to close sockets...
+2015-01-28T08:05:10.007+0800 [initandlisten] shutdown: waiting for fs preallocator...
+2015-01-28T08:05:10.007+0800 [initandlisten] shutdown: lock for final commit...
+2015-01-28T08:05:10.007+0800 [initandlisten] shutdown: final commit...
+2015-01-28T08:05:10.007+0800 [initandlisten] shutdown: closing all files...
+2015-01-28T08:05:10.007+0800 [initandlisten] closeAllFiles() finished
+2015-01-28T08:05:10.007+0800 [initandlisten] dbexit: really exiting now
+2015-01-28T08:10:26.877+0800 ***** SERVER RESTARTED *****
+2015-01-28T08:10:26.991+0800 [initandlisten] MongoDB starting : pid=428 port=27017 dbpath=/Users/chenliang/git_projects/namebb/db 64-bit host=chenliang.local
+2015-01-28T08:10:26.991+0800 [initandlisten] db version v2.6.5
+2015-01-28T08:10:26.991+0800 [initandlisten] git version: nogitversion
+2015-01-28T08:10:26.991+0800 [initandlisten] build info: Darwin miniyosemite.local 14.0.0 Darwin Kernel Version 14.0.0: Fri Sep 19 00:26:44 PDT 2014; root:xnu-2782.1.97~2/RELEASE_X86_64 x86_64 BOOST_LIB_VERSION=1_49
+2015-01-28T08:10:26.991+0800 [initandlisten] allocator: tcmalloc
+2015-01-28T08:10:26.991+0800 [initandlisten] options: { command: [ "run" ], config: "/usr/local/etc/mongod.conf", net: { bindIp: "127.0.0.1" }, storage: { dbPath: "/Users/chenliang/git_projects/namebb/db" }, systemLog: { destination: "file", logAppend: true, path: "/Users/chenliang/git_projects/namebb/mongo.log" } }
+2015-01-28T08:10:26.991+0800 [initandlisten] exception in initAndListen: 10296 
+*********************************************************************
+ ERROR: dbpath (/Users/chenliang/git_projects/namebb/db) does not exist.
+ Create this directory or give existing directory in --dbpath.
+ See http://dochub.mongodb.org/core/startingandstoppingmongo
+*********************************************************************
+, terminating
+2015-01-28T08:10:26.991+0800 [initandlisten] dbexit: 
+2015-01-28T08:10:26.991+0800 [initandlisten] shutdown: going to close listening sockets...
+2015-01-28T08:10:26.991+0800 [initandlisten] shutdown: going to flush diaglog...
+2015-01-28T08:10:26.991+0800 [initandlisten] shutdown: going to close sockets...
+2015-01-28T08:10:26.992+0800 [initandlisten] shutdown: waiting for fs preallocator...
+2015-01-28T08:10:26.992+0800 [initandlisten] shutdown: lock for final commit...
+2015-01-28T08:10:26.992+0800 [initandlisten] shutdown: final commit...
+2015-01-28T08:10:26.992+0800 [initandlisten] shutdown: closing all files...
+2015-01-28T08:10:26.995+0800 [initandlisten] closeAllFiles() finished
+2015-01-28T08:10:26.996+0800 [initandlisten] dbexit: really exiting now
+2015-01-31T13:16:03.319+0800 ***** SERVER RESTARTED *****
+2015-01-31T13:16:03.362+0800 [initandlisten] MongoDB starting : pid=342 port=27017 dbpath=/Users/chenliang/git_projects/namebb/db 64-bit host=chenliang.local
+2015-01-31T13:16:03.362+0800 [initandlisten] db version v2.6.5
+2015-01-31T13:16:03.362+0800 [initandlisten] git version: nogitversion
+2015-01-31T13:16:03.362+0800 [initandlisten] build info: Darwin miniyosemite.local 14.0.0 Darwin Kernel Version 14.0.0: Fri Sep 19 00:26:44 PDT 2014; root:xnu-2782.1.97~2/RELEASE_X86_64 x86_64 BOOST_LIB_VERSION=1_49
+2015-01-31T13:16:03.362+0800 [initandlisten] allocator: tcmalloc
+2015-01-31T13:16:03.362+0800 [initandlisten] options: { command: [ "run" ], config: "/usr/local/etc/mongod.conf", net: { bindIp: "127.0.0.1" }, storage: { dbPath: "/Users/chenliang/git_projects/namebb/db" }, systemLog: { destination: "file", logAppend: true, path: "/Users/chenliang/git_projects/namebb/mongo.log" } }
+2015-01-31T13:16:03.363+0800 [initandlisten] exception in initAndListen: 10296 
+*********************************************************************
+ ERROR: dbpath (/Users/chenliang/git_projects/namebb/db) does not exist.
+ Create this directory or give existing directory in --dbpath.
+ See http://dochub.mongodb.org/core/startingandstoppingmongo
+*********************************************************************
+, terminating
+2015-01-31T13:16:03.363+0800 [initandlisten] dbexit: 
+2015-01-31T13:16:03.363+0800 [initandlisten] shutdown: going to close listening sockets...
+2015-01-31T13:16:03.363+0800 [initandlisten] shutdown: going to flush diaglog...
+2015-01-31T13:16:03.363+0800 [initandlisten] shutdown: going to close sockets...
+2015-01-31T13:16:03.363+0800 [initandlisten] shutdown: waiting for fs preallocator...
+2015-01-31T13:16:03.363+0800 [initandlisten] shutdown: lock for final commit...
+2015-01-31T13:16:03.363+0800 [initandlisten] shutdown: final commit...
+2015-01-31T13:16:03.363+0800 [initandlisten] shutdown: closing all files...
+2015-01-31T13:16:03.363+0800 [initandlisten] closeAllFiles() finished
+2015-01-31T13:16:03.363+0800 [initandlisten] dbexit: really exiting now
+2015-02-01T18:49:55.026+0800 ***** SERVER RESTARTED *****
+2015-02-01T18:49:55.213+0800 [initandlisten] MongoDB starting : pid=444 port=27017 dbpath=/Users/chenliang/git_projects/namebb/db 64-bit host=chenliang.local
+2015-02-01T18:49:55.213+0800 [initandlisten] db version v2.6.5
+2015-02-01T18:49:55.213+0800 [initandlisten] git version: nogitversion
+2015-02-01T18:49:55.213+0800 [initandlisten] build info: Darwin miniyosemite.local 14.0.0 Darwin Kernel Version 14.0.0: Fri Sep 19 00:26:44 PDT 2014; root:xnu-2782.1.97~2/RELEASE_X86_64 x86_64 BOOST_LIB_VERSION=1_49
+2015-02-01T18:49:55.213+0800 [initandlisten] allocator: tcmalloc
+2015-02-01T18:49:55.213+0800 [initandlisten] options: { command: [ "run" ], config: "/usr/local/etc/mongod.conf", net: { bindIp: "127.0.0.1" }, storage: { dbPath: "/Users/chenliang/git_projects/namebb/db" }, systemLog: { destination: "file", logAppend: true, path: "/Users/chenliang/git_projects/namebb/mongo.log" } }
+2015-02-01T18:49:55.213+0800 [initandlisten] exception in initAndListen: 10296 
+*********************************************************************
+ ERROR: dbpath (/Users/chenliang/git_projects/namebb/db) does not exist.
+ Create this directory or give existing directory in --dbpath.
+ See http://dochub.mongodb.org/core/startingandstoppingmongo
+*********************************************************************
+, terminating
+2015-02-01T18:49:55.213+0800 [initandlisten] dbexit: 
+2015-02-01T18:49:55.213+0800 [initandlisten] shutdown: going to close listening sockets...
+2015-02-01T18:49:55.213+0800 [initandlisten] shutdown: going to flush diaglog...
+2015-02-01T18:49:55.213+0800 [initandlisten] shutdown: going to close sockets...
+2015-02-01T18:49:55.213+0800 [initandlisten] shutdown: waiting for fs preallocator...
+2015-02-01T18:49:55.213+0800 [initandlisten] shutdown: lock for final commit...
+2015-02-01T18:49:55.213+0800 [initandlisten] shutdown: final commit...
+2015-02-01T18:49:55.214+0800 [initandlisten] shutdown: closing all files...
+2015-02-01T18:49:55.214+0800 [initandlisten] closeAllFiles() finished
+2015-02-01T18:49:55.214+0800 [initandlisten] dbexit: really exiting now
+2015-02-01T18:52:10.262+0800 ***** SERVER RESTARTED *****
+2015-02-01T18:52:10.308+0800 [initandlisten] MongoDB starting : pid=376 port=27017 dbpath=/Users/chenliang/git_projects/namebb/db 64-bit host=chenliang.local
+2015-02-01T18:52:10.308+0800 [initandlisten] db version v2.6.5
+2015-02-01T18:52:10.308+0800 [initandlisten] git version: nogitversion
+2015-02-01T18:52:10.308+0800 [initandlisten] build info: Darwin miniyosemite.local 14.0.0 Darwin Kernel Version 14.0.0: Fri Sep 19 00:26:44 PDT 2014; root:xnu-2782.1.97~2/RELEASE_X86_64 x86_64 BOOST_LIB_VERSION=1_49
+2015-02-01T18:52:10.308+0800 [initandlisten] allocator: tcmalloc
+2015-02-01T18:52:10.308+0800 [initandlisten] options: { command: [ "run" ], config: "/usr/local/etc/mongod.conf", net: { bindIp: "127.0.0.1" }, storage: { dbPath: "/Users/chenliang/git_projects/namebb/db" }, systemLog: { destination: "file", logAppend: true, path: "/Users/chenliang/git_projects/namebb/mongo.log" } }
+2015-02-01T18:52:10.309+0800 [initandlisten] exception in initAndListen: 10296 
+*********************************************************************
+ ERROR: dbpath (/Users/chenliang/git_projects/namebb/db) does not exist.
+ Create this directory or give existing directory in --dbpath.
+ See http://dochub.mongodb.org/core/startingandstoppingmongo
+*********************************************************************
+, terminating
+2015-02-01T18:52:10.309+0800 [initandlisten] dbexit: 
+2015-02-01T18:52:10.309+0800 [initandlisten] shutdown: going to close listening sockets...
+2015-02-01T18:52:10.309+0800 [initandlisten] shutdown: going to flush diaglog...
+2015-02-01T18:52:10.309+0800 [initandlisten] shutdown: going to close sockets...
+2015-02-01T18:52:10.309+0800 [initandlisten] shutdown: waiting for fs preallocator...
+2015-02-01T18:52:10.309+0800 [initandlisten] shutdown: lock for final commit...
+2015-02-01T18:52:10.309+0800 [initandlisten] shutdown: final commit...
+2015-02-01T18:52:10.309+0800 [initandlisten] shutdown: closing all files...
+2015-02-01T18:52:10.309+0800 [initandlisten] closeAllFiles() finished
+2015-02-01T18:52:10.309+0800 [initandlisten] dbexit: really exiting now
+2015-02-01T18:56:37.353+0800 ***** SERVER RESTARTED *****
+2015-02-01T18:56:37.480+0800 [initandlisten] MongoDB starting : pid=348 port=27017 dbpath=/Users/chenliang/git_projects/namebb/db 64-bit host=chenliang.local
+2015-02-01T18:56:37.480+0800 [initandlisten] db version v2.6.5
+2015-02-01T18:56:37.480+0800 [initandlisten] git version: nogitversion
+2015-02-01T18:56:37.480+0800 [initandlisten] build info: Darwin miniyosemite.local 14.0.0 Darwin Kernel Version 14.0.0: Fri Sep 19 00:26:44 PDT 2014; root:xnu-2782.1.97~2/RELEASE_X86_64 x86_64 BOOST_LIB_VERSION=1_49
+2015-02-01T18:56:37.480+0800 [initandlisten] allocator: tcmalloc
+2015-02-01T18:56:37.480+0800 [initandlisten] options: { command: [ "run" ], config: "/usr/local/etc/mongod.conf", net: { bindIp: "127.0.0.1" }, storage: { dbPath: "/Users/chenliang/git_projects/namebb/db" }, systemLog: { destination: "file", logAppend: true, path: "/Users/chenliang/git_projects/namebb/mongo.log" } }
+2015-02-01T18:56:37.481+0800 [initandlisten] exception in initAndListen: 10296 
+*********************************************************************
+ ERROR: dbpath (/Users/chenliang/git_projects/namebb/db) does not exist.
+ Create this directory or give existing directory in --dbpath.
+ See http://dochub.mongodb.org/core/startingandstoppingmongo
+*********************************************************************
+, terminating
+2015-02-01T18:56:37.481+0800 [initandlisten] dbexit: 
+2015-02-01T18:56:37.481+0800 [initandlisten] shutdown: going to close listening sockets...
+2015-02-01T18:56:37.481+0800 [initandlisten] shutdown: going to flush diaglog...
+2015-02-01T18:56:37.481+0800 [initandlisten] shutdown: going to close sockets...
+2015-02-01T18:56:37.481+0800 [initandlisten] shutdown: waiting for fs preallocator...
+2015-02-01T18:56:37.481+0800 [initandlisten] shutdown: lock for final commit...
+2015-02-01T18:56:37.481+0800 [initandlisten] shutdown: final commit...
+2015-02-01T18:56:37.481+0800 [initandlisten] shutdown: closing all files...
+2015-02-01T18:56:37.481+0800 [initandlisten] closeAllFiles() finished
+2015-02-01T18:56:37.481+0800 [initandlisten] dbexit: really exiting now
+2015-02-01T18:58:00.526+0800 ***** SERVER RESTARTED *****
+2015-02-01T18:58:00.568+0800 [initandlisten] MongoDB starting : pid=381 port=27017 dbpath=/Users/chenliang/git_projects/namebb/db 64-bit host=chenliang.local
+2015-02-01T18:58:00.568+0800 [initandlisten] db version v2.6.5
+2015-02-01T18:58:00.568+0800 [initandlisten] git version: nogitversion
+2015-02-01T18:58:00.568+0800 [initandlisten] build info: Darwin miniyosemite.local 14.0.0 Darwin Kernel Version 14.0.0: Fri Sep 19 00:26:44 PDT 2014; root:xnu-2782.1.97~2/RELEASE_X86_64 x86_64 BOOST_LIB_VERSION=1_49
+2015-02-01T18:58:00.568+0800 [initandlisten] allocator: tcmalloc
+2015-02-01T18:58:00.568+0800 [initandlisten] options: { command: [ "run" ], config: "/usr/local/etc/mongod.conf", net: { bindIp: "127.0.0.1" }, storage: { dbPath: "/Users/chenliang/git_projects/namebb/db" }, systemLog: { destination: "file", logAppend: true, path: "/Users/chenliang/git_projects/namebb/mongo.log" } }
+2015-02-01T18:58:00.568+0800 [initandlisten] exception in initAndListen: 10296 
+*********************************************************************
+ ERROR: dbpath (/Users/chenliang/git_projects/namebb/db) does not exist.
+ Create this directory or give existing directory in --dbpath.
+ See http://dochub.mongodb.org/core/startingandstoppingmongo
+*********************************************************************
+, terminating
+2015-02-01T18:58:00.568+0800 [initandlisten] dbexit: 
+2015-02-01T18:58:00.568+0800 [initandlisten] shutdown: going to close listening sockets...
+2015-02-01T18:58:00.568+0800 [initandlisten] shutdown: going to flush diaglog...
+2015-02-01T18:58:00.568+0800 [initandlisten] shutdown: going to close sockets...
+2015-02-01T18:58:00.568+0800 [initandlisten] shutdown: waiting for fs preallocator...
+2015-02-01T18:58:00.568+0800 [initandlisten] shutdown: lock for final commit...
+2015-02-01T18:58:00.568+0800 [initandlisten] shutdown: final commit...
+2015-02-01T18:58:00.568+0800 [initandlisten] shutdown: closing all files...
+2015-02-01T18:58:00.569+0800 [initandlisten] closeAllFiles() finished
+2015-02-01T18:58:00.569+0800 [initandlisten] dbexit: really exiting now
+2015-02-01T19:03:51.682+0800 ***** SERVER RESTARTED *****
+2015-02-01T19:03:51.780+0800 [initandlisten] MongoDB starting : pid=430 port=27017 dbpath=/Users/chenliang/git_projects/namebb/db 64-bit host=chenliang.local
+2015-02-01T19:03:51.780+0800 [initandlisten] db version v2.6.5
+2015-02-01T19:03:51.780+0800 [initandlisten] git version: nogitversion
+2015-02-01T19:03:51.780+0800 [initandlisten] build info: Darwin miniyosemite.local 14.0.0 Darwin Kernel Version 14.0.0: Fri Sep 19 00:26:44 PDT 2014; root:xnu-2782.1.97~2/RELEASE_X86_64 x86_64 BOOST_LIB_VERSION=1_49
+2015-02-01T19:03:51.780+0800 [initandlisten] allocator: tcmalloc
+2015-02-01T19:03:51.780+0800 [initandlisten] options: { command: [ "run" ], config: "/usr/local/etc/mongod.conf", net: { bindIp: "127.0.0.1" }, storage: { dbPath: "/Users/chenliang/git_projects/namebb/db" }, systemLog: { destination: "file", logAppend: true, path: "/Users/chenliang/git_projects/namebb/mongo.log" } }
+2015-02-01T19:03:51.780+0800 [initandlisten] exception in initAndListen: 10296 
+*********************************************************************
+ ERROR: dbpath (/Users/chenliang/git_projects/namebb/db) does not exist.
+ Create this directory or give existing directory in --dbpath.
+ See http://dochub.mongodb.org/core/startingandstoppingmongo
+*********************************************************************
+, terminating
+2015-02-01T19:03:51.780+0800 [initandlisten] dbexit: 
+2015-02-01T19:03:51.780+0800 [initandlisten] shutdown: going to close listening sockets...
+2015-02-01T19:03:51.780+0800 [initandlisten] shutdown: going to flush diaglog...
+2015-02-01T19:03:51.780+0800 [initandlisten] shutdown: going to close sockets...
+2015-02-01T19:03:51.780+0800 [initandlisten] shutdown: waiting for fs preallocator...
+2015-02-01T19:03:51.780+0800 [initandlisten] shutdown: lock for final commit...
+2015-02-01T19:03:51.780+0800 [initandlisten] shutdown: final commit...
+2015-02-01T19:03:51.780+0800 [initandlisten] shutdown: closing all files...
+2015-02-01T19:03:51.781+0800 [initandlisten] closeAllFiles() finished
+2015-02-01T19:03:51.781+0800 [initandlisten] dbexit: really exiting now
+2015-02-03T11:56:41.216+0800 ***** SERVER RESTARTED *****
+2015-02-03T11:56:41.531+0800 [initandlisten] MongoDB starting : pid=9649 port=27017 dbpath=/Users/chenliang/git_projects/namebb/db 64-bit host=chenliang.local
+2015-02-03T11:56:41.531+0800 [initandlisten] db version v2.6.5
+2015-02-03T11:56:41.531+0800 [initandlisten] git version: nogitversion
+2015-02-03T11:56:41.531+0800 [initandlisten] build info: Darwin miniyosemite.local 14.0.0 Darwin Kernel Version 14.0.0: Fri Sep 19 00:26:44 PDT 2014; root:xnu-2782.1.97~2/RELEASE_X86_64 x86_64 BOOST_LIB_VERSION=1_49
+2015-02-03T11:56:41.531+0800 [initandlisten] allocator: tcmalloc
+2015-02-03T11:56:41.531+0800 [initandlisten] options: { command: [ "run" ], config: "/usr/local/etc/mongod.conf", net: { bindIp: "127.0.0.1" }, storage: { dbPath: "/Users/chenliang/git_projects/namebb/db" }, systemLog: { destination: "file", logAppend: true, path: "/Users/chenliang/git_projects/namebb/mongo.log" } }
+2015-02-03T11:56:41.533+0800 [initandlisten] exception in initAndListen: 10296 
+*********************************************************************
+ ERROR: dbpath (/Users/chenliang/git_projects/namebb/db) does not exist.
+ Create this directory or give existing directory in --dbpath.
+ See http://dochub.mongodb.org/core/startingandstoppingmongo
+*********************************************************************
+, terminating
+2015-02-03T11:56:41.533+0800 [initandlisten] dbexit: 
+2015-02-03T11:56:41.533+0800 [initandlisten] shutdown: going to close listening sockets...
+2015-02-03T11:56:41.533+0800 [initandlisten] shutdown: going to flush diaglog...
+2015-02-03T11:56:41.533+0800 [initandlisten] shutdown: going to close sockets...
+2015-02-03T11:56:41.533+0800 [initandlisten] shutdown: waiting for fs preallocator...
+2015-02-03T11:56:41.533+0800 [initandlisten] shutdown: lock for final commit...
+2015-02-03T11:56:41.533+0800 [initandlisten] shutdown: final commit...
+2015-02-03T11:56:41.533+0800 [initandlisten] shutdown: closing all files...
+2015-02-03T11:56:41.533+0800 [initandlisten] closeAllFiles() finished
+2015-02-03T11:56:41.533+0800 [initandlisten] dbexit: really exiting now
+2015-02-04T19:11:40.654+0800 ***** SERVER RESTARTED *****
+2015-02-04T19:11:40.690+0800 [initandlisten] MongoDB starting : pid=940 port=27017 dbpath=/Users/chenliang/git_projects/namebb/db 64-bit host=chenliang.local
+2015-02-04T19:11:40.690+0800 [initandlisten] db version v2.6.5
+2015-02-04T19:11:40.690+0800 [initandlisten] git version: nogitversion
+2015-02-04T19:11:40.690+0800 [initandlisten] build info: Darwin miniyosemite.local 14.0.0 Darwin Kernel Version 14.0.0: Fri Sep 19 00:26:44 PDT 2014; root:xnu-2782.1.97~2/RELEASE_X86_64 x86_64 BOOST_LIB_VERSION=1_49
+2015-02-04T19:11:40.690+0800 [initandlisten] allocator: tcmalloc
+2015-02-04T19:11:40.690+0800 [initandlisten] options: { command: [ "run" ], config: "/usr/local/etc/mongod.conf", net: { bindIp: "127.0.0.1" }, storage: { dbPath: "/Users/chenliang/git_projects/namebb/db" }, systemLog: { destination: "file", logAppend: true, path: "/Users/chenliang/git_projects/namebb/mongo.log" } }
+2015-02-04T19:11:40.690+0800 [initandlisten] exception in initAndListen: 10296 
+*********************************************************************
+ ERROR: dbpath (/Users/chenliang/git_projects/namebb/db) does not exist.
+ Create this directory or give existing directory in --dbpath.
+ See http://dochub.mongodb.org/core/startingandstoppingmongo
+*********************************************************************
+, terminating
+2015-02-04T19:11:40.690+0800 [initandlisten] dbexit: 
+2015-02-04T19:11:40.690+0800 [initandlisten] shutdown: going to close listening sockets...
+2015-02-04T19:11:40.690+0800 [initandlisten] shutdown: going to flush diaglog...
+2015-02-04T19:11:40.690+0800 [initandlisten] shutdown: going to close sockets...
+2015-02-04T19:11:40.691+0800 [initandlisten] shutdown: waiting for fs preallocator...
+2015-02-04T19:11:40.691+0800 [initandlisten] shutdown: lock for final commit...
+2015-02-04T19:11:40.691+0800 [initandlisten] shutdown: final commit...
+2015-02-04T19:11:40.691+0800 [initandlisten] shutdown: closing all files...
+2015-02-04T19:11:40.691+0800 [initandlisten] closeAllFiles() finished
+2015-02-04T19:11:40.691+0800 [initandlisten] dbexit: really exiting now

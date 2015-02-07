@@ -81,7 +81,7 @@ $(document).ready(function () {
 		}
 	}
 
-	if(babyXing == "" || true) {
+	if(babyXing == "") {
 
 		$.mobile.changePage('#settingPage', 'pop', true, true);
 	} else {
