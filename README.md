@@ -3,9 +3,9 @@ It's been a real pain to pick a name for our baby, so i built this tool to rando
 names from commonly used chinese characters and rank them based on the mysterious "rules" I
 found online.
 
-The tool can be accessed at:
+This tool is built with Flask and JQuery Mobile, and can be accessed at:
 
-chenliang.info/namebb
+chenliang.info/name
 
 Also,
 
