@@ -79,7 +79,7 @@ def get_name(xing, word_count, gender):
         return names[random.randint(0, len(names) - 1)]
 
 
-@app.route('/random')
+@app.route('/name/random')
 def random_name():
     xing = request.args.get('xing')
     word_count = int(request.args.get('word_count'))
@@ -119,7 +119,7 @@ def get_stroke_count_score(name):
 #     count = len(filter(lambda c:c in all_characters_in_poems, name))
 #     return int(count*1.0*100/len(name))
 
-@app.route('/rank')
+@app.route('/name/rank')
 def rank_name():
     return jsonify(score=random.randint(0, 100), name=request.args.get('name', ''))
 
