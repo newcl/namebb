@@ -11,3 +11,4 @@ access.log
 mongo.log
 
 templates/.idea/workspace.xml
+*.pyc
