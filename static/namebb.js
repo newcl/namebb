@@ -12,7 +12,7 @@ function getNextName() {
 		html: ""
 	});
 
-	$.getJSON("/random", {
+	$.getJSON("/name/random", {
 		"xing": babyXing,
 		"word_count": babyNameWordCount,
 		"gender": babyGender
